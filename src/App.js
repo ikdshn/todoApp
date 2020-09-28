@@ -4,19 +4,9 @@ import List from "./List";
 import shortid from "shortid";
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      content: "うんち",
-    },
-    {
-      content: "うんち",
-    },
-    {
-      content: "うんち",
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
-  const addTodo = (content) => {
+  function addTodo(content) {
     setTodos([
       ...todos,
       {
@@ -24,7 +14,7 @@ const App = () => {
         id: shortid.generate(),
       },
     ]);
-  };
+  }
 
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
