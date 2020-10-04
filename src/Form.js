@@ -16,6 +16,7 @@ const Form = ({ addTodo }) => {
           setValue(e.target.value);
         }}
       />
+      <button type="submit">追加</button>
     </form>
   );
 };

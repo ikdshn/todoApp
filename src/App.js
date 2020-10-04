@@ -7,13 +7,17 @@ const App = () => {
   const [todos, setTodos] = useState([]);
 
   function addTodo(content) {
-    setTodos([
-      ...todos,
-      {
-        content,
-        id: shortid.generate(),
-      },
-    ]);
+    if (content.trim() !== "") {
+      setTodos([
+        ...todos,
+        {
+          content,
+          id: shortid.generate(),
+        },
+      ]);
+    } else {
+      alert("入力してください");
+    }
   }
 
   const deleteTodo = (id) => {
