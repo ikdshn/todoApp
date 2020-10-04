@@ -1,8 +1,8 @@
 import React from "react";
 
-const name = "shun";
 
-const Title = () => {
+
+const Title = ({ name }) => {
   return (
     <>
       <h1>Todo App!</h1>

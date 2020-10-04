@@ -5,6 +5,7 @@ import List from "./List";
 import shortid from "shortid";
 
 const App = () => {
+  const name = "shun";
   const [todos, setTodos] = useState([]);
 
   function addTodo(content) {
@@ -27,7 +28,7 @@ const App = () => {
 
   return (
     <>
-      <Title />
+      <Title name={name}/>
       <From addTodo={addTodo} />
       <List todos={todos} deleteTodo={deleteTodo} />
     </>
