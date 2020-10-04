@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Title from "./Title";
 import From from "./Form";
 import List from "./List";
 import shortid from "shortid";
@@ -24,12 +25,9 @@ const App = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  const name = "shun";
-
   return (
     <>
-      <h1>Todo App!</h1>
-      <h2 className="title">ようこそ{name}さん</h2>
+      <Title />
       <From addTodo={addTodo} />
       <List todos={todos} deleteTodo={deleteTodo} />
     </>

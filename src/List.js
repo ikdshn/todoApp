@@ -5,7 +5,14 @@ const List = ({ todos, deleteTodo }) => {
   return (
     <ul>
       {todos.map((todo) => {
-        return <Item content={todo.content} id={todo.id} key={todo.id} deleteTodo={deleteTodo} />;
+        return (
+          <Item
+            content={todo.content}
+            id={todo.id}
+            key={todo.id}
+            deleteTodo={deleteTodo}
+          />
+        );
       })}
     </ul>
   );
