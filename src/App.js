@@ -24,12 +24,12 @@ const App = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  const name = "shun"
+  const name = "shun";
 
   return (
     <>
       <h1>Todo App!</h1>
-  <h2 className="title">ようこそ{name}さん</h2>
+      <h2 className="title">ようこそ{name}さん</h2>
       <From addTodo={addTodo} />
       <List todos={todos} deleteTodo={deleteTodo} />
     </>
