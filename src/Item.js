@@ -18,7 +18,7 @@ const Item = ({ content, id, deleteTodo }) => {
       <span style={{ textDecoration: isDone ? "line-through" : "none" }}>
         {content}
       </span>
-      <button onClick={handleDelete}>掃除</button>
+      <button onClick={handleDelete}>削除</button>
     </li>
   );
 };

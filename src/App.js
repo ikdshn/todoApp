@@ -6,21 +6,18 @@ import shortid from "shortid";
 
 const App = () => {
   const name = "shun";
+
   const [todos, setTodos] = useState([]);
 
-  function addTodo(content) {
-    if (content.trim() !== "") {
-      setTodos([
-        ...todos,
-        {
-          content,
-          id: shortid.generate(),
-        },
-      ]);
-    } else {
-      alert("入力してください");
-    }
-  }
+  const addTodo = (text) => {
+    setTodos([
+      ...todos,
+      {
+        content: text,
+        id: shortid.generate(),
+      },
+    ]);
+  };
 
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
@@ -28,7 +25,7 @@ const App = () => {
 
   return (
     <>
-      <Title name={name}/>
+      <Title name={name} />
       <From addTodo={addTodo} />
       <List todos={todos} deleteTodo={deleteTodo} />
     </>
