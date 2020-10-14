@@ -1,6 +1,6 @@
 import React from "react";
 
-const Title = ({name}) => {
+const Title = ({ name }) => {
   return (
     <>
       <h1>Todo App!</h1>

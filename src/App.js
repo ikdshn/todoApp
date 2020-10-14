@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Title from "./Title";
 import From from "./Form";
 import List from "./List";
@@ -25,9 +25,9 @@ const App = () => {
 
   return (
     <>
-      <Title name={name}/>
-      <From addTodo={addTodo}/>
-      <List todos={todos} deleteTodo={deleteTodo}/>
+      <Title name={name} />
+      <From addTodo={addTodo} />
+      <List todos={todos} deleteTodo={deleteTodo} />
     </>
   );
 };

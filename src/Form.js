@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const Form = ({addTodo}) => {
+const Form = ({ addTodo }) => {
   const [text, setText] = useState("");
 
   const handleTextChange = (e) => {
@@ -19,7 +19,7 @@ const Form = ({addTodo}) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input value={text} onChange={handleTextChange}/>
+      <input value={text} onChange={handleTextChange} />
       <button type="submit">追加</button>
     </form>
   );
